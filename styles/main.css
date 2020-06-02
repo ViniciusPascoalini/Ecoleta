@@ -151,7 +151,7 @@ background-position: 35vw 5vw;
     
     #page-home header a{
         position: absolute;
-        bottom: 48px;
+        bottom: 30px;
 
         left: 50%;
         transform: translateX(-50%);
@@ -159,5 +159,9 @@ background-position: 35vw 5vw;
 
     #paga-home main{
         align-items: center;
+    }
+
+    #page-home main a{
+        margin: 0 auto;
     }
 }
