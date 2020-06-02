@@ -157,11 +157,8 @@ background-position: 35vw 5vw;
         transform: translateX(-50%);
     }
 
-    #paga-home main{
+    #page-home main{
         align-items: center;
     }
 
-    #page-home main a{
-        margin: 0 auto;
-    }
 }
