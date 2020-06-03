@@ -1,6 +1,8 @@
 :root{
     --title-color: #322153;
     --primary-color: #34cb79;
+    --teste02-color: #cb783479
+    ;
 }
 
 *{
@@ -14,7 +16,7 @@ html {
 }
 
 body{
-    background: #f0f0f5;
+    background: #afcb3479;
     -webkit-font-smoothing: antialiased;
 }
 
