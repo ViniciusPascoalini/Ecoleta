@@ -1,0 +1,27 @@
+{
+  "name": "Ecoleta",
+  "version": "1.0.0",
+  "description": "Site para reunir informações sobre pontos de coleta",
+  "main": "src/ index.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViniciusPascoalini/Ecoleta.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViniciusPascoalini/Ecoleta/issues"
+  },
+  "homepage": "https://github.com/ViniciusPascoalini/Ecoleta#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
