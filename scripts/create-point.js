@@ -27,14 +27,27 @@ function getCities(event) {
     citySelect.disabled = true
 
     fetch(url)
-    .then( res => res.json())
+    .then( res => { return res.json()
+        
+        /*let cities = res.json()
+        console.log(cities)
+
+        let mappedCities = cities.map(city => {
+                ({
+                id: city.id,
+                nome: city.nome
+            })
+        })
+        Promise.resolve(mappedCities)*/
+    })
     .then( cities => {
         for (const city of cities) {
             citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
         }
 
         citySelect.disabled = false
-      })
+    
+    })     
 }
 
 document
