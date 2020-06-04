@@ -82,6 +82,7 @@
     
     #page-home main a:hover{
         background-color: #2fb86e;
+        box-shadow: var(--pattern-shadow);
     }
     
     #page-home main a span{
