@@ -14,96 +14,49 @@
 </head>
 
 <body>
-    <div id="page-">
+    <div id="page-search-results">
         <header>
             <img src="/assets/logo.svg" alt="Logomarca">
-            <a href="./index.html">
+            <a href="index.html">
                 <span></span>
                 Voltar para home
             </a>
         </header>
-        <form action="">
-            <h1>Cadastro do ponto de coleta</h1>
-            <fieldset>
-                <legend>
-                    <h2>Dados da entidade</h2>
-                </legend>
-                <div class="field">
-                    <label for="name">Nome da entidade *</label>
-                    <input type="text" name="name" required>
-                </div>
-                <div class="field-group">
-                    <div class="field">
-                        <label for="adress">Endereço *</label>
-                        <input type="text" name="adress" required>
-                    </div>
-                    <div class="field">
-                        <label for="adress2">Número/Complemento *</label>
-                        <input type="text" name="adress2" required>
-                    </div>
-                </div>
-                <div class="field-group">
-                    <div class="field">
-                        <label for="state">Estado *</label>
-                        <select name="uf" required>
-                            <option value="">Selecione o Estado</option>
-                        </select>
+        
+        <main>
+            <h4>
+                <strong>2 pontos</strong> encontrados
+            </h4>
 
-                        <input type="hidden" name="state">
-                    </div>
-                    <div class="field">
-                        <label for="city">Cidade *</label>
-                        <select name="city" disabled required>
-                            <option value="">Selecione o Cidade</option>
-                        </select>
-                    </div>
-                </div>
-            </fieldset>
+            <div class="cards">
+                <div class="card">
+                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=801&q=80" alt="Colectoria">
+                <h1>Colectoria</h1>
+                <h3>Resíduos Eletrônicos, Lâmpadas</h3>
+                <p>
+                    Rio do Sul, Santa Catarina <br/>
+                    Guilherme Gemballa, Jardim América <br/>
+                    Nº 260
+                </p>
+            </div>
+            
+            <div class="card">
+                <img src="https://images.pexels.com/photos/802221/pexels-photo-802221.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Paparsider">
+                <h1>Paparsider</h1>
+                <h3>Papéis e Papelão</h3>
+                <p>
+                    Rio do Sul, Santa Catarina <br/>
+                    Guilherme Gemballa, Jardim América <br/>
+                    Nº 260
+                </p>
+            </div>
 
-            <fieldset>
-                <legend>
-                    <h2>Ítens de coleta</h2>
-                </legend>
+                
+        </div>
 
-                <div class="items-grid">
-                    <li data-id="1">
-                        <img src="/assets/lampadas.svg" alt="Lâmpadas">
-                        <span>Lâmpadas</span>
-                    </li>
+        </main>
 
-                    <li data-id="2">
-                        <img src="/assets/baterias.svg" alt="Pilhas e Baterias">
-                        <span>Pilhas e Baterias</span>
-                    </li>
-
-                    <li data-id="3">
-                        <img src="/assets/papeis-papelao.svg" alt="Papéis e Papelão">
-                        <span>Papéis e Papelão</span>
-                    </li>
-
-                    <li data-id="4">
-                        <img src="/assets/eletronicos.svg" alt="Resíduos Eletrônicos">
-                        <span>Resíduos Eletrônicos</span>
-                    </li>
-
-                    <li data-id="5">
-                        <img src="/assets/organicos.svg" alt="Resíduos Orgânicos">
-                        <span>Resíduos Orgânicos</span>
-                    </li>
-
-                    <li data-id="6">
-                        <img src="/assets/oleo.svg" alt="Óleo de Cozinha">
-                        <span>Óleo de Cozinha</span>
-                    </li>
-                </div>
-
-                <input type="hidden" name="items">
-
-            </fieldset>
-            <button type="submit">Cadastrar ponto de coleta</button>
-        </form>
     </div>
-    <script src="./scripts/create-point.js"></script>
 </body>
 
 </html>
