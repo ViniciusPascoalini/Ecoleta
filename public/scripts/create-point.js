@@ -26,28 +26,36 @@ function getCities(event) {
     citySelect.innerHTML = "<option value=''>Selecione a Cidade</option>"
     citySelect.disabled = true
 
-    fetch(url)
-    .then( res => { return res.json()
+    async function fetchCities(url) {
+        const response = await fetch(url)
         
-        /*let cities = res.json()
-        console.log(cities)
-
+        let cities = await response.json()
+        
         let mappedCities = cities.map(city => {
-                ({
-                id: city.id,
-                nome: city.nome
+           return ({
+            id: city.id,
+            nome: city.nome
             })
         })
-        Promise.resolve(mappedCities)*/
-    })
-    .then( cities => {
-        for (const city of cities) {
+
+        for (const city of mappedCities) {
             citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
         }
 
         citySelect.disabled = false
-    
-    })     
+    }
+
+    fetchCities(url)
+  
+   /*fetch(url)
+    .then( res => res.json()
+    )
+    .then( cities => {
+        for (const city of cities) {
+            citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
+        }
+        citySelect.disabled = false
+    })*/
 }
 
 document
