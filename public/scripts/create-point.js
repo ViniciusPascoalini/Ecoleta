@@ -30,13 +30,6 @@ function getCities(event) {
         const response = await fetch(url)
         
         let cities = await response.json()
-        
-        /*let mappedCities = cities.map(city => {    //ISTO AQUI É MELHOR OU PIOR?
-           return ({                                 //pq dps rodaria o for num vetor bem menor 
-            id: city.id,                             //apenas com os id's e nomes
-            nome: city.nome
-            })
-        })*/
 
         for (const city of cities) {
             citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
