@@ -1,5 +1,5 @@
 #modal {
-    background-color: rgba(0, 0, 0, 0.479);
+    background-color: rgba(0, 0, 0, 0.74);
     height: 100vh;
     width: 100vw;
 
@@ -93,3 +93,16 @@
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.685);
 }
 
+/*Para o model point-created*/
+
+#modal.point .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#modal.point h1{
+    color: white;
+    margin-top: 32px;
+}
