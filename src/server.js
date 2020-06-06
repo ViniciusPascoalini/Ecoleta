@@ -28,8 +28,19 @@ server.get("/create-point", (req, res) => {
 })
 
 server.post("/savepoint", (req, res) => {
-    
-    console.log(req.body)
+
+    db.run(`
+        CREATE TABLE IF NOT EXISTS places(
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            image TEXT,
+            name TEXT,
+            address TEXT,
+            address2 TEXT,
+            state TEXT,
+            city TEXT,
+            items TEXT    
+        );
+    `)
     
     //Inserir dados no Banco de Dados
     const query = `
@@ -81,7 +92,7 @@ server.get("/search", (req, res) => {
 
 
 
-    db.all(`SELECT * FROM places WHERE city LIKE '${search}%'`, function(err, rows){
+    db.all(`SELECT * FROM places WHERE city LIKE'%${search}%'`, function(err, rows){
         if(err){
             return console.log(err)
         }
@@ -94,6 +105,14 @@ server.get("/search", (req, res) => {
 
 })
 
+db.all(`SELECT * FROM places`, function(err, rows){
+    if(err){
+        return console.log(err)
+    }
+
+    console.log("Aqui estão seus registros: ")
+    console.log(rows)
+})
 
 // ligar o servidor
 server.listen(3000)

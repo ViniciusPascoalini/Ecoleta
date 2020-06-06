@@ -5,6 +5,8 @@ const db = new sqlite3.Database("./src/database/database.db")
 
 module.exports = db
 
+
+
 //serialize(roda uma sequencia de código?)
 /* db.serialize( () => {
     //Criar uma tabela
@@ -38,8 +40,8 @@ module.exports = db
         "Paparsider",
         "Guilherme Gemballa, Jardim América",
         "Nº 260",
-        "Rio do Sul",
         "Santa Catarina",
+        "Rio do Sul",
         "Resíduos Eletrônicos, Lâmpadas"
     ]
 
