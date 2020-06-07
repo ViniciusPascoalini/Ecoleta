@@ -30,7 +30,7 @@
                 {% for place in places %}
                 
                     <div class="card">
-                        <img src="{{ place.image }}" alt="place.nome">
+                        <a href="{{ place.projectUrl }}"> <img src="{{ place.image }}" alt="place.nome"> </a> 
                         <h1>{{ place.name }}</h1>
                         <h3>{{ place.items }}</h3>
                         <p>

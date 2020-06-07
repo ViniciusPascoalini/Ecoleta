@@ -13,8 +13,9 @@ module.exports = db
     db.run(`
         CREATE TABLE IF NOT EXISTS places(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            image TEXT,
             name TEXT,
+            projectUrl TEXT,
+            image TEXT,
             address TEXT,
             address2 TEXT,
             state TEXT,
@@ -24,16 +25,17 @@ module.exports = db
     `)
 
     //Inserir dados na tabela
-    const query = `
+    /*const query = `
         INSERT INTO places (
-            image,
             name,
+            projectUrl,
+            image,
             address,
             address2,
             state,
             city,
             items
-        ) VALUES (?,?,?,?,?,?,?);
+        ) VALUES (?,?,?,?,?,?,?,?);
     `
     const values = [
         "https://images.pexels.com/photos/802221/pexels-photo-802221.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",

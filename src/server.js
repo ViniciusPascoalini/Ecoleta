@@ -28,35 +28,24 @@ server.get("/create-point", (req, res) => {
 })
 
 server.post("/savepoint", (req, res) => {
-
-    db.run(`
-        CREATE TABLE IF NOT EXISTS places(
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            image TEXT,
-            name TEXT,
-            address TEXT,
-            address2 TEXT,
-            state TEXT,
-            city TEXT,
-            items TEXT    
-        );
-    `)
     
-    //Inserir dados no Banco de Dados
+    //Inserir dados na tabela
     const query = `
         INSERT INTO places (
-            image,
             name,
+            projectUrl,
+            image,
             address,
             address2,
             state,
             city,
             items
-        ) VALUES (?,?,?,?,?,?,?);
+        ) VALUES (?,?,?,?,?,?,?,?);
     `
     const values = [
-            req.body.image,
             req.body.name,
+            req.body.projectUrl,
+            req.body.image,
             req.body.address,
             req.body.address2,
             req.body.state,
