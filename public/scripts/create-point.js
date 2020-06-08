@@ -15,6 +15,7 @@ populateUFs()
 function getCities(event) {
     const citySelect = document.querySelector("[name=city]")
     const stateInput = document.querySelector("[name=state]")
+    const loader = document.querySelector("#loader")
     
     const ufValue = event.target.value
 
@@ -27,6 +28,9 @@ function getCities(event) {
     citySelect.disabled = true
 
     async function fetchCities(url) {
+
+        loader.innerHTML = ' <img src="assets/recycle-preloader.gif" alt="Loading"> '
+
         const response = await fetch(url)
         
         let cities = await response.json()
@@ -34,6 +38,8 @@ function getCities(event) {
         for (const city of cities) {
             citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
         }
+
+        loader.innerHTML = ""
 
         citySelect.disabled = false
     }

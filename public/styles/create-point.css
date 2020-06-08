@@ -108,6 +108,22 @@ form .field-group .field + .field {
     margin-left: 24px;
 }
 
+form .field-group span {
+    
+    display: flex;
+
+    height: 25px;
+    width: 25px;
+
+    margin: 37px 0 0 2px;
+}
+
+form #city {
+    box-sizing: content-box;
+    margin-left: 40px;
+
+}
+
 form button {
     width: 260px;
     height: 56px;
@@ -182,4 +198,10 @@ form button:hover{
 .items-grid li img,
 .items-grid li span {
     pointer-events: none;
+}
+
+@keyframes preloader_5 {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(-180deg);}
+    100% {transform: rotate(-360deg);}
 }
