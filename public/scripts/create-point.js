@@ -29,7 +29,7 @@ function getCities(event) {
 
     async function fetchCities(url) {
 
-        loader.innerHTML = ' <img src="assets/recycle-preloader.gif" alt="Loading"> '
+        loader.innerHTML = ' '
 
         const response = await fetch(url)
         
