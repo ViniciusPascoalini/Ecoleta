@@ -14,7 +14,3 @@
 <h1 align="center">
     <img src="https://ik.imagekit.io/pascoalini/_websitePresentation_TcYguj4cV.gif">
 </h1>
-
-<h1 align="center">
-    <img src="https://ik.imagekit.io/pascoalini/noResults_HAeRIY-HS.gif">
-</h1>
